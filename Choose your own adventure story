@@ -1,0 +1,276 @@
+string_t name, name2, cheat, sheet, introChoice, middle1Choice, middle2Choice, middle3Choice;
+int t, coin, coin2;
+t = 3000;
+
+
+
+sheet = "After introduction\n  Option 1 = Getting into the house\n  Option 2 = Find a cellar with ladder\n  Option 3 = Find a box and key on the ground\n  Middle 1 Option 1 = Leave, Game End\n  Middle 1 Option 2 = Find a can of beans in closet, Game End\n  Middle 1 Option 3 = Coin tails, Game end.  Coin heads, win game by finding money., Game end\n  Middle 2 Option 1 = Open window and get cut, Game End\n  Middle 2 Option 2 = Leave, Game End\n  Middle 2 Option 3 = Go to cellar, if tails, Game End.  If Heads, fall and break legs, Game End\n  Middle 3 Option 1 = Leave, Game End\n  Middle 3 Option 2 = Open box, find shiny key ring, Game End\n  Middle 3 Option 3 = Get Lost, find road, go back, Game End\n";
+
+printf("Would you like to see the roadmap?\n");
+scanf("%s", &cheat);
+if(cheat=="Yes"  || cheat=="yes"){
+    printf(sheet);
+}
+
+printf("What is your name?\n");
+scanf("%s", &name);
+
+printf("What is your friend's name?\n");
+scanf("%s", &name2);
+
+printf(name, " and ", name2, " live in a country-like area.  \nThey are neighbors, but with a short walk behind the house, there is a river and a path to walk on.  \nThe river is usually cold, but sometimes warm, and there are many things to do there.  \n", name, " and ", name2, " usually go there often, \nbut this time, they venture farther out than normal, and find something surprising and interesting.  \nIt’s an old abandoned building, it looks like a small house or a shed, but they can’t tell which.  \nIt looks old, and the windows are boarded up.  What do you do?\n A. Try and get into the house.\n B. Explore around the house.\n C. Look at the surrounding area for other things.\n");
+scanf("%s", &introChoice);
+
+while (introChoice != "A" && introChoice != "B" && introChoice != "C" && introChoice != "a" && introChoice != "b" && introChoice !="c"){
+    printf("I'm sorry, that isn't a choice. Try again.\n A. Try and get into the house.\n B. Explore around the house.\n C. Look at the surrounding area for other things.");
+    scanf("%s", &introChoice);
+}
+
+void middle1(){     //middle1
+    printf(name, " and ", name2, " decide to be adventurous and try to get into the house, to see what's inside.\n");
+    delay(t);
+    printf(name, " tries to pull on the boards blocking the door, but to no avail.\n");
+    delay(t);
+    printf(name2, " comes over to see, and they both try to pull the boards, eventually pulling it off, and the other boards afterwards.\n");
+    delay(t);
+    printf(name, " sees the door handle and it is unlocked.  They open the door, and walk in.\n");
+    delay(t);
+    printf(name, " sees a plain room with a bed, a closet, and some drawers.  What do you do?\n");
+    delay(t);
+    printf(" A) Leave the Building\n B) Go look in the closet\n C) Open the drawers.");
+    scanf("%s", &middle1Choice);
+}
+
+void middle2(){     //middle2
+    printf(name, " decides to look around the outside of the house a little bit before deciding anything.\n");
+    delay(t);
+    printf(name, " and ", name2, " look at the ground, the walls, and without going far at all, they find a hammer.\n");
+    delay(t);
+    printf("The hammer looks old, and most of it is rusted.\n");
+    delay(t);
+    printf("They then pick it up and take it with them, continuing to look around the building.\n");
+    delay(t);
+    printf("Once the two get to the back of the building, there looks like what could be a cellar, with who knows what in it.\n");
+    delay(t);
+    printf(name, " opens it up and sees a ladder leading down, but it's pitch black. What do you do?\n");
+    delay(t);
+    printf(" A) Try and pry off the window boards with the hammer.\n B) Leave the area.\n C) Go into the dark cellar.\n");
+    scanf("%s", &middle2Choice);
+}
+
+void middle3(){  //middle3
+    printf("They decide to stray from the building, and look around for anything else out of the ordinary.\n");
+    delay(t);
+    printf(name, " and ", name2, " walk a little ways, before finding something buried in the ground.\n");
+    delay(t);
+    printf("They dig it up, and end up finding a small key.\n");
+    delay(t);
+    printf(name2, " is a couple feet next to ", name, ", and they find a box with a lock on it.  What do you do?\n");
+    delay(t);
+    printf(" A) Leave both the box and key alone, then go back to the house.\n B) Try to open the box with the key.\n C) Keep looking for other things.\n");
+    scanf("%s", &middle3Choice);
+}
+
+void end1(){    //end1
+    printf(name, " and ", name2, " talk over what they just saw.\n");
+    delay(t);
+    printf("They talk about what could happen if they went in, and what they could possibly find.\n");
+    delay(t);
+    printf(name2, " decides that it wouldn’t be worth it trying to get into the building over safety issues they could find.\n");
+    delay(t);
+    printf("The two decide to leave, going back to their houses, normally continuing with their day as they would otherwise.\n");
+    delay(t);
+    printf("They end up forgetting about what happened. The End.\n");
+}
+
+void end2(){    //end2
+    printf("After looking around in the building, which looks to be a small house, ", name, " is curious about the closet.\n");
+    delay(t);
+    printf(name2, " is also looking around, and ends up joining ", name, " to see what's in the closet.\n");
+    delay(t);
+    printf("The two hesitate at first, thinking of what they could find inside, and then end up opening it with relative ease.\n");
+    delay(t);
+    printf("The first thing they see is nothing.\n");
+    delay(t);
+    printf("They look around the closet a little more and find something, then realize it's a can of beans.\n");
+    delay(t);
+    printf("They become uninterested, and leave. The End.\n");
+}
+
+void end3(){    //end3
+    printf(name, " and ", name2, " decide to look at the drawers, which are next to the bed.\n");
+    delay(t);
+    printf("It's a small desk with double drawers underneath.\n");
+    delay(t);
+    printf("They open it, and it looks like someone had been there.\n");
+    delay(t);
+    printf("They see keys, a flashlight, cash, and reading glasses.\n");
+    delay(t);
+    printf("It looked like someone had not been into the house in years, especially with the door and windows being boarded up.\n");
+    delay(t);
+    printf("It's already getting late, so ", name, " and ", name2, " decide to come back tomorrow to see if anyone will be there.\n");
+    delay(t);
+    printf("The next day, they head out once again, and before getting there, they flip a coin, heads they keep on going, tails they stop.\n");
+    delay(t);
+    coin = randint(0,1);
+    if(coin == 0){
+        printf("It was heads!\n");
+        delay(t);
+        printf("They get back in and there is no one there, nothing unchanged from how it was left the day before.\n");
+        delay(t);
+        printf("They look and decide to take what's in there, it's their lucky day.\n  The End.\n");
+    }
+    else if(coin == 1){
+        printf("It was tails. The End.");
+    }
+}
+
+void end4(){    //end4
+    printf(name, " and ", name2, " talk about what they found, and decide to try and pull off the boards on the windows with the hammer they found.\n");
+    delay(t);
+    printf("They go back over to the windows, and pull off the boards.\n");
+    delay(t);
+    printf("After this, ", name2, " grabs a rock and breaks the window itself.\n");
+    delay(t);
+    printf("The two go in, and find a house that looks like someone had just been living there.\n");
+    delay(t);
+    printf("Once they climb in, ", name, " get cut a little bit.\n");
+    delay(t);
+    printf("They get in, look around, and don’t find anything.\n");
+    delay(t);
+    printf("The cut hurts more and more as time goes on, so the two turn back, go home, and stay away from there. The End.\n");
+}
+
+void end5(){    //end5
+    printf(name, " and ", name2, " talk over what they just saw.\n");
+    delay(t);
+    printf("They talk about what could happen if they went in, and what they could possibly find.\n");
+    delay(t);
+    printf(name2, " decides that it wouldn’t be worth it trying to get into the building over safety issues they could find.\n");
+    delay(t);
+    printf("The two decide to leave, going back to their houses, normally continuing with their day as they would otherwise.\n");
+    delay(t);
+    printf("They end up forgetting about what happened. The End.\n");
+}
+
+
+void end6(){    //end6
+    printf(name, " and ", name2, " decide to try and see what is in the cellar next to the building.\n");
+    delay(t);
+    printf("Once they open it up, there is a ladder inside made of wood, and ", name, " wants to go down.\n");
+    delay(t);
+    printf("You flip a coin to see if ", name, " goes down, heads they do, tails they don’t.\n");
+    delay(t);
+    coin2 = randint(0,1);
+    if(coin2 == 0){
+        printf("It was heads!\n");
+        delay(t);
+        printf(name, " climbs down, and then they hear the ladder start creaking.\n");
+        delay(t);
+        printf("The ladder rung below them breaks, and their right leg falls.\n");
+        delay(t);
+        printf("Then the rung they are holding onto breaks, and ", name, " falls to the bottom.\n");
+        delay(t);
+        printf(name2, " calls for an ambulance, and they never go back there again, the end.\n");
+    }
+    else if(coin2 == 1){
+        printf("It was tails. The End.");
+    }
+}
+
+void end7(){    //end7
+    printf(name, " and ", name2, " talk over what they just saw.\n");
+    delay(t);
+    printf("They talk about what could happen if they went in, and what they could possibly find.\n");
+    delay(t);
+    printf(name2, " decides that it wouldn’t be worth it trying to get into the building over safety issues they could find.\n");
+    delay(t);
+    printf("The two decide to leave, going back to their houses, normally continuing with their day as they would otherwise.\n");
+    delay(t);
+    printf("They end up forgetting about what happened. The End.\n");
+}
+
+void end8(){    //end8
+    printf("After looking around, the two wonder what is in the locked box.\n");
+    delay(t);
+    printf(name, " and ", name2, " decide to open up the box, and use the key they found.\n");
+    delay(t);
+    printf(name, " puts in the key, but the lock won’t budge.\n");
+    delay(t);
+    printf("They use more force, then it opens!\n");
+    delay(t);
+    printf("Once the two open the box, at first they don’t notice anything.\n");
+    delay(t);
+    printf("Once they look in it a little more, they see something silver and shiny.\n");
+    delay(t);
+    printf("They take a look at it, and it looks like a ring!\n");
+    delay(t);
+    printf("Once they pick it up however, it's the ring you put your keys on.\n");
+    delay(t);
+    printf("The two become uninterested, and leave.\n");
+}
+
+void end9(){   //end9
+    printf(name, " and ", name2, " decide to keep looking around.\n");
+    delay(t);
+    printf("They go pretty far, and haven’t found anything so far.\n");
+    delay(t);
+    printf("They go to turn back around to head back to the building, but once it seems the two had been walking more than traveled outwards, they wonder if they're getting lost.\n");
+    delay(t);
+    printf("After another 10 minutes, ", name, " and ", name2, " decide they are lost, and try to call someone, but with no cell reception.\n");
+    delay(t);
+    printf("They have been walking for a whole hour now, and come along a road.\n");
+    delay(t);
+    printf(name, " recognizes the road, and heads back to their house.\n");
+    delay(t);
+    printf("The two decide to never go back to the building again. The end.\n");
+}
+
+if(introChoice == "A" || introChoice == "a"){
+    middle1();
+    while (middle1Choice != "A" && middle1Choice != "a" && middle1Choice != "B" && middle1Choice != "b" && middle1Choice != "C" && middle1Choice != "c"){
+        printf("Thats not an option. Try again please.\n");
+        scanf("%s", &middle1Choice);
+    }
+    if(middle1Choice == "A" || middle1Choice == "a"){
+        end1();
+    }
+    else if(middle1Choice == "B" || middle1Choice == "b"){
+        end2();
+    }
+    else if(middle1Choice == "C" || middle1Choice == "c"){
+        end3();
+    }
+}
+else if(introChoice == "B" || introChoice == "b"){
+    middle2();
+    while(middle2Choice != "A" && middle2Choice != "a" && middle2Choice != "B" && middle2Choice != "b" && middle2Choice != "C" && middle2Choice != "c"){
+        printf("Thats not an option. Try again please.\n");
+        scanf("%s", &middle2Choice);
+    }
+    if(middle2Choice == "A" || middle2Choice == "a"){
+        end4();
+    }
+    else if(middle2Choice == "B" || middle2Choice == "b"){
+        end5();
+    }
+    else if(middle2Choice == "C" || middle2Choice == "c"){
+        end6();
+    }
+}
+else if (introChoice == "C" || introChoice == "c"){
+    middle3();
+    while (middle3Choice != "A" && middle3Choice != "a" && middle3Choice != "B" && middle3Choice != "b" && middle3Choice != "C" && middle3Choice != "c"){
+        printf("Thats not an option. Try again please.\n");
+        scanf("%s", &middle3Choice);
+    }
+    if(middle3Choice == "A" || middle3Choice == "a"){
+        end7();
+    }
+    else if(middle3Choice == "B" || middle3Choice == "b"){
+        end8();
+    }
+    else if(middle3Choice == "C" || middle3Choice == "c"){
+        end9();
+    }
+}
